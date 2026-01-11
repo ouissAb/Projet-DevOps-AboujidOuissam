@@ -54,7 +54,11 @@ pipeline {
     // Actions post-build
     post {
         failure {
-            slackSend(channel: env.SLACK_CHANNEL, message: "❌ Échec du pipeline pour Projet-DevOps-AboujidOuissam")
+           slackSend(
+            channel: env.SLACK_CHANNEL,
+            tokenCredentialId: 'slack-token',
+            message: "❌ Échec du pipeline pour Projet-DevOps-AboujidOuissam"
+        )
         }
     }
 }
