@@ -9,7 +9,7 @@ pipeline {
 
     environment {
         // Nom du canal Slack
-        SLACK_CHANNEL = '#devops'
+        SLACK_CHANNEL = '#devops-test1'
     }
 
     stages {
