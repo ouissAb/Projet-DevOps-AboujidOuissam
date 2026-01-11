@@ -46,7 +46,7 @@ pipeline {
         // 5️⃣ Notification Slack si succès
         stage('Notify Slack') {
             steps {
-                slackSend(channel: env.SLACK_CHANNEL,token: env.SLACK_TOKEN, message: "✅ Pipeline terminé avec succès pour Projet-DevOps-AboujidOuissam")
+                slackSend(channel: env.SLACK_CHANNEL,tokenCredentialId: 'slack-token', message: "✅ Pipeline terminé avec succès pour Projet-DevOps-AboujidOuissam")
             }
         }
     }
